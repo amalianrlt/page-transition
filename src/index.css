@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+h5 {
+  color: black;
+  font-style: normal;
+}
+
+.userCard {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.slider {
+  transform: none;
+  -webkit-transform: none;
+  /* -webkit-transform: translateX(-100%); */
+}
+
+.slide-in {
+  transform: translateX(0%);
+  animation: slide-in 0.3s ease;
+  -webkit-animation: slide-in 0.3s ease;
+}
+
+.slide-out {
+  animation: slide-out 300ms ease;
+  -webkit-animation: slide-out 300ms ease;
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
