@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class DetailPage extends Component {
   constructor(props) {
@@ -26,17 +27,19 @@ class DetailPage extends Component {
   };
 
   render() {
+    console.log(this.props, "detail");
     return (
       <div
         ref={this.myRef}
         onScroll={this.onScroll}
-        className={
-          this.state.isScrolling === true
-            ? "slider"
-            : this.state.slideIn === true
-            ? "slide-out"
-            : "slide-in"
-        }
+        style={{ position: "fixed", width: "calc(100% - 40px)", height: "calc(100vh - 100px)" }}
+        // className={
+        //   this.state.isScrolling === true
+        //     ? "slider"
+        //     : this.state.slideIn === true
+        //     ? "slide-out"
+        //     : "slide-in"
+        // }
       >
         <button
           onClick={async () => {
@@ -59,4 +62,4 @@ class DetailPage extends Component {
   }
 }
 
-export default DetailPage;
+export default withRouter(DetailPage);
